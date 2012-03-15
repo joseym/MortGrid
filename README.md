@@ -47,13 +47,13 @@ section div.main {
 The above assigns `.main` as a new row, then its first child as an 8 column wide block and its last as a 4 column wide block.
 
 ###Other Options
-_"push" or "offset"_ - This allows you to place your block to the right by __X__ number of columns 
+__"push" or "offset"__ - This allows you to place your block to the right by __X__ number of columns 
 
 ```
 #grid > .offset(3); // pushes the column to the right 3 columns
 ```
 
-_"alpha", "omega" or both "alpha/omega"_ - This is a column param, it determines if the block should not have opening or closing (or neither) gutter padding. If it is not passed then it assume both padding
+__"alpha", "omega" or both "alpha/omega"__ - This is a column param, it determines if the block should not have opening or closing (or neither) gutter padding. If it is not passed then it assume both padding
 
 ```
 #grid > .column(3, 'alpha'); // removes the left padding of the column
@@ -61,7 +61,7 @@ _"alpha", "omega" or both "alpha/omega"_ - This is a column param, it determines
 #grid > .column(6, 'omega'); // removes the padding from the right side of column
 ```
 
-_"flush"_ - Similar to "alpha and omega". This option removes the padding of the assigned direction. Unlike "alpha" or "Omega" it doesn't modify the columns width.
+__"flush"__ - Similar to "alpha and omega". This option removes the padding of the assigned direction. Unlike "alpha" or "Omega" it doesn't modify the columns width.
 
 ```
 #grid > .flush('right'); // shift the column to the right by the amount of the gutter
@@ -70,5 +70,5 @@ _"flush"_ - Similar to "alpha and omega". This option removes the padding of the
 
 ###Further configuration
 - Number of columns: `@columnNum: 16`
-- Gutter Width: `@gutterWidth` __spacing to left and right of column__
-- Grid Container Width: `@containerWidth: 1020px` __column widths will be generated to fit within this__
+- Gutter Width: `@gutterWidth` _spacing to left and right of column_
+- Grid Container Width: `@containerWidth: 1020px` _column widths will be generated to fit within this_
