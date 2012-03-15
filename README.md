@@ -17,17 +17,19 @@ Bootstrap's container is variable while the columns widths and gutters are stati
 ###Usage
 Assuming 12 grid system
 1. Import grid.less into your main less file
-```css
+
+```
 @import "grid";
 ```
 2. Assign the grids container to your container element
-```css
+```
 #wrapper {
 	#grid > .container();
 }
 ```
+
 3. Assign a block as a row or columns
-```css
+```
 section div.main {
 	// .main is a new row
 	#grid > .row();
@@ -44,19 +46,19 @@ The above assigns `.main` as a new row, then its first child as an 8 column wide
 
 ###Other Options
 _"push" or "offset"_ - This allows you to place your block to the right by __X__ number of columns 
-```css
+```
 #grid > .offset(3); // pushes the column to the right 3 columns
 ```
 
 _"alpha", "omega" or both "alpha/omega"_ - This is a column param, it determines if the block should not have opening or closing (or neither) gutter padding. If it is not passed then it assume both padding
-```css
+```
 #grid > .column(3, 'alpha'); // removes the left padding of the column
 #grid > .column(3, 'alpha/omega'); // removes the padding from both left and right sides of column
 #grid > .column(6, 'omega'); // removes the padding from the right side of column
 ```
 
 _"flush"_ - Similar to "alpha and omega". This option removes the padding of the assigned direction. Unlike "alpha" or "Omega" it doesn't modify the columns width.
-```css
+```
 #grid > .flush('right'); // shift the column to the right by the amount of the gutter
 #grid > .flush('left'); // shifts the column to the left by the amount of the gutter
 ```
