@@ -62,6 +62,7 @@ _"alpha", "omega" or both "alpha/omega"_ - This is a column param, it determines
 ```
 
 _"flush"_ - Similar to "alpha and omega". This option removes the padding of the assigned direction. Unlike "alpha" or "Omega" it doesn't modify the columns width.
+
 ```
 #grid > .flush('right'); // shift the column to the right by the amount of the gutter
 #grid > .flush('left'); // shifts the column to the left by the amount of the gutter
