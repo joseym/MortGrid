@@ -22,6 +22,7 @@ Assuming 12 grid system
 @import "grid";
 ```
 2. Assign the grids container to your container element
+
 ```
 #wrapper {
 	#grid > .container();
@@ -29,6 +30,7 @@ Assuming 12 grid system
 ```
 
 3. Assign a block as a row or columns
+
 ```
 section div.main {
 	// .main is a new row
@@ -46,11 +48,13 @@ The above assigns `.main` as a new row, then its first child as an 8 column wide
 
 ###Other Options
 _"push" or "offset"_ - This allows you to place your block to the right by __X__ number of columns 
+
 ```
 #grid > .offset(3); // pushes the column to the right 3 columns
 ```
 
 _"alpha", "omega" or both "alpha/omega"_ - This is a column param, it determines if the block should not have opening or closing (or neither) gutter padding. If it is not passed then it assume both padding
+
 ```
 #grid > .column(3, 'alpha'); // removes the left padding of the column
 #grid > .column(3, 'alpha/omega'); // removes the padding from both left and right sides of column
