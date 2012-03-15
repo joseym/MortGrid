@@ -1,7 +1,7 @@
 #MortGrid
 ##Super Simplified [LessCSS](http://lesscss.org/) Grid System
 
-This grid system began before Twitter Bootstrap and is loosely based off of the [960 Grid System](960.gs)
+This grid system began before Twitter Bootstrap and is loosely based off of the [960 Grid System](http://960.gs)
 
 I've recently modifed it to use lesscss namespacing.
 
