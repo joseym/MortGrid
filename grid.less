@@ -1,0 +1,79 @@
+// Clearfix
+// --------
+// For clearing floats like a boss h5bp.com/q
+.clearfix {
+	*zoom: 1;
+	&:before,
+	&:after {
+		display: table;
+		content: "";
+	}
+	&:after {
+		clear: both;
+	}
+}
+
+// GRID SYSTEM
+// -----------
+
+#grid {
+
+	// some grid vars
+	@columnNum: 		12;
+	@gutterWidth: 		10px;
+	@containerWidth:	960px;
+	@columnWidth:		(@containerWidth / @columnNum) - (@gutterWidth * 2);
+
+	.container {
+		width: @containerWidth;
+		margin-left: auto;
+		margin-right: auto;
+		.clearfix();
+	}
+
+	.row() {
+	  .clearfix();
+	}
+
+	/**
+	 * Flush Removes margins from columns
+	 * @params direction remove margins to force column flush in this direction
+	 */
+	.flush(@direction) when (@direction = 'right'){
+		left: @gutterWidth;
+		position: relative;
+		margin-right: 0 !important;
+	}
+
+	.flush(@direction) when (@direction = 'left'){
+		margin-left: 0 !important;
+	}
+
+	.column(@columns, @secondary) when (@secondary = 'alpha'){
+		margin-left: 0 !important;
+		width: (@columnWidth * @columns) + ((@gutterWidth * (@columns - 1)) * 2) + @gutterWidth !important;
+	}
+
+	.column(@columns, @secondary) when (@secondary = 'omega'){
+		margin-right: 0 !important;
+		width: (@columnWidth * @columns) + ((@gutterWidth * (@columns - 1)) * 2) + @gutterWidth !important;
+	}
+
+	.column(@columns, @secondary) when (@secondary = 'alpha/omega'){
+		margin-left: 0 !important;
+		margin-right: 0 !important;
+		width: (@columnWidth * @columns) + ((@gutterWidth * (@columns - 1)) * 2) + (@gutterWidth * 2) !important;
+	}
+
+	.column(@columns: 1) {
+		float: left;
+		margin: 0 @gutterWidth;
+		width: (@columnWidth * @columns) + ((@gutterWidth * (@columns - 1)) * 2);
+	}
+
+	.offset(@columns) {
+		position: relative;
+		left: (@columnWidth * @columns) + ((@gutterWidth * @columns) * 2);
+	}
+
+}
